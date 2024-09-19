@@ -121,7 +121,6 @@ INSERT INTO categorias (nombre_categoria) VALUES
 ## PASO 2- Añade a la tabla `usuarios` la columna `id_categoria`
 La columna debe ser tipo número
 
-
 ## PASO 3- Añade categorías a varios usuarios
 Podría ser algo así:
 ```SQL
@@ -133,13 +132,14 @@ UPDATE usuarios SET id_categoria = 1 WHERE id_usuario IN (1, 5, 9, 13, 17);
 
 Haz un `JOIN` que saque usuarios.id_usuario, usuarios.nombre, usuarios.apellido, usuarios.email, usuarios.edad, roles.nombre_rol, categorias.nombre_categoria
 
+
 ### Relación tipo N:M (muchos a muchos)
 
 ## PASO 1 - Crea una tabla intermedia llamada `usuarios_categorias` con:
 
 - id_usuario_categoria: tipo número, que sea una clave primaria e incremente su número.
 - id_usuario: tipo número.
-- id_categoría: tipo número.
+- id_categoría: tipo número. 
 
 Añadiremos dentro de la creación de la tabla intermedia dos claves foráneas.
 - Una que haga referencia el `id_usaurio` de la tabla intermedia con el `id_usuario` de `usuarios`
